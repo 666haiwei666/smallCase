@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       ul>li{
+           list-style: none;
+           float: left;
+           font-size: 64px;
+           margin-right: 10px;
+       }
+
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            var $lis=$("ul li");
+                $lis.on("click",function () {
+                    $(this).text("★").prevAll().text("★");
+                    $(this).nextAll().text("☆");
+                });
+
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+</ul>
+</body>
+</html>
