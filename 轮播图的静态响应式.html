@@ -1,0 +1,89 @@
+
+<!--h5文档申明-->
+<!DOCTYPE html>
+<!--文档语言申明-->
+<html lang="zh-CN">
+<head>
+    <!--文档编码申明-->
+    <meta charset="utf-8">
+    <!--要求网页使用留言器最高版本的内核来渲染-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--视口设置：视口的宽度和设备一致，默认的缩放比例和pc端一致-->
+    <meta name="viewport" content="width=device-width, initial-scale=1，user-scalable=0">
+
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <STYLE>
+        .BOX{
+            display: block;
+            width: 100%;
+        }
+        .BOX>img{
+            width: 100%;
+            display: block;
+        }
+        .BOX01{
+            display: block;
+            height: 400px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </STYLE>
+</head>
+<body>
+<!--宽度自适应，高度自适应-->
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <a href="" CLASS="BOX01 hidden-xs" style="background-image: url('../../前端项目/前端综合项目/微金所/images/slide_01_2000x410.jpg');"></a>
+            <a href="" CLASS="BOX hidden-lg hidden-md hidden-sm"><img  src="../../前端项目/前端综合项目/微金所/images/slide_01_640x340.jpg"></a>
+        </div>
+        <div class="item">
+            <a href="" CLASS="BOX01 hidden-xs" style="background-image: url('../../前端项目/前端综合项目/微金所/images/slide_02_2000x410.jpg');"></a>
+            <a href="" CLASS="BOX hidden-lg hidden-md hidden-sm"><img  src="../../前端项目/前端综合项目/微金所/images/slide_02_640x340.jpg"></a>
+        </div>
+        <div class="item">
+            <a href="" CLASS="BOX01 hidden-xs" style="background-image: url('../../前端项目/前端综合项目/微金所/images/slide_03_2000x410.jpg');"></a>
+            <a href="" CLASS="BOX hidden-lg hidden-md hidden-sm"><img  src="../../前端项目/前端综合项目/微金所/images/slide_03_640x340.jpg"></a>
+        </div>
+        <div class="item">
+            <a href="" CLASS="BOX01 hidden-xs" style="background-image: url('../../前端项目/前端综合项目/微金所/images/slide_04_2000x410.jpg');"></a>
+            <a href="" CLASS="BOX hidden-lg hidden-md hidden-sm"><img  src="../../前端项目/前端综合项目/微金所/images/slide_04_640x340.jpg"></a>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </a>
+</div>
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
