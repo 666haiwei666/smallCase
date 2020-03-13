@@ -1,0 +1,62 @@
+//@charset "UTF-8";
+//@maincolor:#e92323;
+//div{
+//  background: @maincolor;
+//}
+//@ClassName:box;
+//.@{ClassName}{
+//   background: red;
+//}
+ //混入
+//类混入
+@charset "UTF-8";
+//.w50{
+//  width: 50%;
+//}
+//.f_left{
+//  float: left;
+//}
+//.f_right{
+//  float: right;
+//}
+//.box{
+//   //width: 50%;
+//   //float: left;
+//  .f_left();
+//  .w50();
+//}
+//Maxin函数混入
+//.方法名(参数名){
+//
+//}
+// .w50(){
+//  width: 50%;
+//}
+// .f_left(){
+// float: left;
+//}
+//  .box{
+//  .w50();
+//  .f_left();
+//}
+//1.定义了参数(没有默认值)，在调用的时候必须传参
+//2.怎么定义默认值
+.f(@direction:left){
+  float: @direction;
+}
+//定义了参数，可传可不传
+.borderRadius( @width:100px){
+   border-radius: @width;
+  -webkit-border-radius: @width;
+  -moz-border-radius: @width;
+  -o-border-radius:@width;
+  -ms-border-radius: @width;
+
+}
+.box{
+  .f();
+  .borderRadius(20);
+}
+
+//把方法和变量分别定义在两个文件中方便维护
+//嵌套

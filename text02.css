@@ -1,0 +1,25 @@
+@charset "UTF-8";
+.box {
+  float: left;
+  border-radius: 20;
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  -o-border-radius: 20;
+  -ms-border-radius: 20;
+}
+div {
+  border-radius: 20;
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  -o-border-radius: 20;
+  -ms-border-radius: 20;
+}
+ul {
+  width: 900%;
+}
+ul li {
+  width: 11.11111111%;
+  color: #ff80ff;
+  background: #ffffff;
+}
+/*# sourceMappingURL=text02.css.map */
