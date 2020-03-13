@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            position: absolute;
+        }
+        body,html{
+            height: 4000px;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+   <img src="bird.png" alt="">
+   <div></div>
+<script>
+   var img=document.getElementsByTagName("img")[0];
+   var div=document.getElementsByTagName("div")[0];
+  //注意是哪个东西的移动事件
+  //  document.onmousemove=function (e) {
+  //      img.style.left=e.clientX+"px";
+  //      img.style.top=e.clientY+"px";
+  //  }
+    //当页面出现滚动条时，e.clientX就不管用了，因为他只是可视区的
+   // document.onmousemove=function (e) {
+   //      img.style.left=e.pageX+"px";
+   //      img.style.top=e.pageY+"px";
+   //  }
+// }
+//在js中想要获取滚动条移动的距离一般比较困难，如果想要在滚动过程中触发什么事件一般要实时监听
+//     //使用document.getElementsByTagName('section')[0].addEventListener('touchmove',function(e){
+//    console.log("开始滑动了touchstart");
+//    let a = document.documentElement.scrollTop;
+//    console.log("滑动距离为：",a);
+//在jquery中比较容易获取滚动条的距离
+
+   // $(function () {
+   //     $(window).scroll(function () {
+   //         if($(window).scrollTop()>=100)
+   //         {
+   //
+   //         }else {
+   //
+   //         }
+   //
+   //     });
+   //     console.log(window);
+   // })
+
+
+</script>
+</body>
+</html>
