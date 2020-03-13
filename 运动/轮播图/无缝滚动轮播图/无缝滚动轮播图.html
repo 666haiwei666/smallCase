@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #box {
+        width: 302px;
+        height: 202px;
+        margin: 100px auto;
+        border: 10px solid #cccccc;
+        position: relative;
+        overflow: hidden;
+    }
+    #div1>ul{
+        height: 302px;
+        width: 4500px;
+        position: absolute;
+    }
+    #div1>ul>li{
+        width: 302px;
+        float: left;
+        list-style: none;
+    }
+</style>
+<body>
+<div id="box">
+    <div id="div1">
+        <ul>
+            <li><img src="imagess/01(1).jpg" alt=""></li>
+            <li><img src="imagess/02.jpg" alt=""></li>
+            <li><img src="imagess/03.jpg" alt=""></li>
+            <li><img src="imagess/04.jpg" alt=""></li>
+        </ul>
+    </div>
+</div>
+<script>
+    var div1=document.getElementById("div1");
+    var ul1=div1.getElementsByTagName("ul")[0];
+    var img1=document.getElementsByTagName("img")[0];
+    var img=document.createElement("img");
+    img.src=img1.src;
+    ul1.appendChild(img);
+    var index=0;
+    setInterval(function () {
+        if(index==3)
+        {
+            ul1.style.left=0+"px";
+            index=0
+        }else{
+            index++;
+            ul1.style.left= -(img1.offsetWidth)*index+"px" ;
+        }
+
+    },1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .box{
+            height: 340px;
+            width: 790px;
+            margin: 100px auto;
+            position: relative;
+
+        }
+        ul>li{
+            list-style: none;
+            position: absolute;
+            display: none;
+        }
+        .current{
+            display: block;
+        }
+        .arrow-left,
+        .arrow-right {
+            font-family: "SimSun", "宋体";
+            width: 30px;
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 50%;
+            margin-top: -30px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 60px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        .arrow-left:hover,
+        .arrow-right:hover {
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        .arrow-left {
+            left: 0;
+        }
+
+        .arrow-right {
+            right: 0;
+        }
+
+    </style>
+    <script>
+        $(function () {
+            var $left=$(".arrow-left");
+            var $right=$(".arrow-right");
+            var count=0;
+            $right.on("click",function () {
+               count++;
+               if(count>= $(".box ul li").length) {
+                   count = 0;
+               }
+               $(".box ul li").eq(count).fadeIn().siblings().fadeOut();
+            });
+            $left.on("click",function () {
+                count--;
+                if(count==-1) {
+                   count= $(".box ul li").length-1;
+                }
+                $(".box ul li").eq(count).fadeIn().siblings().fadeOut();
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li class="current"><a href="javascript:;"><img src="images/1.jpg" alt=""></a></li>
+        <li ><a href="javascript:;"><img src="images/2.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="images/3.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="images/4.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="images/5.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="images/6.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="images/7.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="images/8.jpg" alt=""></a></li>
+    </ul>
+    <div class="arrow">
+        <span class="arrow-left">&lt;</span>
+        <span class="arrow-right">&gt;</span>
+    </div>
+</div>
+
+
+</body>
+</html>

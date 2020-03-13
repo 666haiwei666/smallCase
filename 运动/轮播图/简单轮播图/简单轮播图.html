@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box {
+            width: 730px;
+            height: 454px;
+            margin: 100px auto;
+            border: 10px solid #cccccc;
+            position: relative;
+            overflow: hidden;
+        }
+        #div1>ul{
+            height: 454px;
+            width: 4500px;
+            position: absolute;
+        }
+        #div1>ul>li{
+            width: 730px;
+            float: left;
+            list-style: none;
+        }
+        #div2{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 999;
+        }
+        .current{
+            background-color: #9f5024 !important;
+        }
+        #div2>ul>li{
+            list-style: none;
+            float: left;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            color: #fff;
+            margin-right: 5px;
+            text-align: center;
+
+
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="box">
+     <div id="div1">
+         <ul>
+             <li><img src="image/1.jpg" alt=""></li>
+             <li><img src="image/2.jpg" alt=""></li>
+             <li><img src="image/3.jpg" alt=""></li>
+             <li><img src="image/4.jpg" alt=""></li>
+             <li><img src="image/5.jpg" alt=""></li>
+             <li><img src="image/6.jpg" alt=""></li>
+         </ul>
+     </div>
+    <div id="div2">
+        <ul>
+            <li class="current">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+</div>
+<script>
+    var div1=document.getElementById("div1");
+    var div2=document.getElementById("div2");
+    var ul1=div1.getElementsByTagName("ul")[0];
+    var li2=div2.getElementsByTagName("li");
+    var img=document.getElementsByTagName("img")[0];
+    for(var i=0;i<li2.length;i++)
+    {
+        li2[i].setAttribute("index",i+1);
+        li2[i].onmouseover=function () {
+            var index=this.getAttribute("index");
+            for(var i=0;i<li2.length;i++)
+            {
+                li2[i].className="";
+            }
+            this.className="current";
+            ul1.style.left=img.offsetWidth*(-index)+img.offsetWidth+"px";
+        }
+    }
+</script>
+</body>
+</html>
